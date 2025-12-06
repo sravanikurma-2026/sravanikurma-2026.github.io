@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sravani Kurma - Work Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --header-bg: #000000;
+            --navbar-bg: #000000;
+            --navbar-hover: #ffffff;
+            --navbar-hover-text: #000000;
+            --section-bg: #000000;
+            --section-gradient: none;
+            --section-title: #ffffff;
+            --section-border: #ffffff;
+            --about-bg: #000000;
+            --about-text: #ffffff;
+            --institution: #ffffff;
+            --dates: #cccccc;
+            --highlight-bg: #cccccc;
+            --highlight-text: #000000;
+            --responsibility-label: #00aaff;
+            --responsibilities: #ffffff;
+            --achievements-text: #ffffff;
+            --achievements-highlight: #00aaff;
+            --contact-text: #ffffff;
+            --contact-link: #00aaff;
+            --progress-bg: #555555;
+            --progress-fill: #ffffff;
+            --matlab: #007bff;
+            --c-cpp: #28a745;
+            --python-ml: #ffc107;
+            --others: #dc3545;
+        }
+
+        .dark {
+            --bg-color: #f4f4f4;
+            --text-color: #2d325a;
+            --header-bg: #2d325a;
+            --navbar-bg: #2d325a;
+            --navbar-hover: #ffffff;
+            --navbar-hover-text: #2d325a;
+            --section-bg: #fff;
+            --section-title: #2d325a;
+            --section-border: #2d325a;
+            --about-bg: #f0f0f0;
+            --about-text: #333;
+            --institution: #444;
+            --dates: #777;
+            --highlight-bg: #ddd;
+            --highlight-text: #2d325a;
+            --responsibility-label: #007bff;
+            --responsibilities: #555;
+            --achievements-text: #2d325a;
+            --achievements-highlight: #007bff;
+            --contact-text: #2d325a;
+            --contact-link: #007bff;
+            --progress-bg: #ddd;
+            --progress-fill: #2d325a;
+            --matlab: #007bff;
+            --c-cpp: #28a745;
+            --python-ml: #ffc107;
+            --others: #dc3545;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .header-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-left: 20px;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            text-align: center;
+            flex: 1;
+        }
+
+        .header-contact {
+            margin-top: 10px;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            color: #ffcc00;
+        }
+
+        @media (max-width: 768px) {
+            .theme-toggle {
+                top: 5px;
+                right: 5px;
+                font-size: 20px;
+            }
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--navbar-bg);
+            overflow: hidden;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .navbar a {
+                display: block;
+                margin: 5px 0;
+                padding: 10px;
+            }
+            .header-image {
+                width: 100px;
+                height: 100px;
+                top: 10px;
+            }
+            .section {
+                width: 95%;
+                padding: 15px;
+            }
+            .skill-name {
+                width: 150px;
+            }
+            .progress-bar {
+                width: 15%;
+            }
+        }
+
+        .navbar a:hover {
+            background-color: var(--navbar-hover);
+            color: var(--navbar-hover-text);
+            border-radius: 5px;
+        }
+
+        .section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--section-bg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            background-image: var(--section-gradient);
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--section-title);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--section-border);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .section-title i {
+            margin-right: 8px;
+        }
+
+        .work-experience ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .work-experience li ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .work-experience li ul li {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .work-header {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--section-border);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .title-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .responsibilities-heading {
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .work-experience li {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .work-experience li i {
+            color: var(--text-color);
+            margin-right: 5px;
+        }
+
+        .institution {
+            font-weight: bold;
+            color: var(--institution);
+        }
+
+        .dates {
+            font-style: italic;
+            color: var(--highlight-text);
+            background-color: var(--highlight-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .responsibilities {
+            color: var(--responsibilities);
+        }
+
+        .responsibility-label {
+            font-weight: bold;
+            color: var(--text-color);
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Sravani Kurma</h1>
+            <h2>Assistant Research Professor -- Mississippi State University</h2>
+        </div>
+        <div class="header-image">
+            <img src="sk.jpg" alt="SK profile picture">
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html"><i class="fa-solid fa-graduation-cap"></i> About Me</a>
+        <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="work-experience.html"><i class="fa-solid fa-briefcase"></i> Work Experience</a>
+        <a href="skills.html"><i class="fa-solid fa-lightbulb"></i> Skills</a>
+        <a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a>
+        <a href="projects.html"><i class="fa-solid fa-project-diagram"></i> Projects</a>
+        <a href="contact.html"><i class="fa-solid fa-user"></i> Contact</a>
+    </div>
+
+    <div class="section" id="work-experience">
+        <div class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</div>
+        <div class="work-experience">
+            <ul>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-university"></i>
+                                <strong>Assistant Research Professor</strong>
+                            </div>
+                            <span class="dates">January 2025 – Present</span>
+                        </div>
+                        <span class="institution">Mississippi State University – Mississippi, USA</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Working on the OAIC project and developing AI-driven O-RAN architecture with a focus on digital twin integration</li>
+                            <li>Leading research on AI-driven, digital twin-enabled Open RAN systems</li>
+                            <li>Submitted research on ORAN, Machine learning and ISAC in IEEE ICC-2025, IEEE TVT-2025, IEEE JSAC-2025, IEEE TWC-2025</li>
+                            <li>Developed LLM based Reinforcement learning algorithms</li>
+                            <li>As a PI/CO-PI, submitted multiple proposals to DOD, MURI, NOFO3, and Department of the Navy (DON), SATc, NSF-VINES Track 1-2025 – currently under review</li>
+                            <li>As a lead PI, collaborated with interdisciplinary and international teams (IIT-BHU, IIT-INDORE, VNIT NAGPUR, ABV-IITM Gwalior) for next-generation ISAC architecture design for NSF-VINES Track-1 2025</li>
+                            <li>Teaching Electric Circuits course and Multisim simulations for Undergraduate students (132 students) for the Fall-2025</li>
+                            <li>Mentoring undergraduates, graduates, and Ph.D students on ORAN and LLM projects</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-network-wired"></i>
+                                <strong>Wireless Connectivity Software Intern</strong>
+                            </div>
+                            <span class="dates">September 2023 - May 2024</span>
+                        </div>
+                        <span class="institution">NXP Semiconductor - Taipei, Taiwan</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Conducted throughput analysis and performance validation of Wi-Fi networks using Sanity testing methodologies</li>
+                            <li>Developed custom utilities aimed at minimizing latency during the testing process, thereby improving evaluation efficiency</li>
+                            <li>Specialized in applying Coverity Static Analysis tools to detect and resolve defects in C-based embedded systems, enhancing code quality and reliability</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-flask"></i>
+                                <strong>Research Assistant</strong>
+                            </div>
+                            <span class="dates">September 2021 - September 2024</span>
+                        </div>
+                        <span class="institution">National Sun-Yat sen University - Kaohsiung, Taiwan</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Worked on 5G/6G communication 8 different projects funded by Taiwan Government</li>
+                            <li>Published 23 works including 12 conferences and 11 transactions on performance analysis of cell-free networks and machine learning algorithms for optimization of RIS based cellular networks</li>
+                            <li>Mentored two graduate students and co-authored 5 publications (i.e., two IEEE Transactions and three conferences)</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-chalkboard-teacher"></i>
+                                <strong>Teaching Assistant</strong>
+                            </div>
+                            <span class="dates">January 2022 - September 2023</span>
+                        </div>
+                        <span class="institution">National Sun Yat-sen University – Kaohsiung, Taiwan</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Worked as a Teaching Assistant for a graduate-level course on Full-Duplex Communication Systems</li>
+                            <li>Assisted in designing lab experiments and grading assignments focused on self-interference cancellation and transceiver design</li>
+                            <li>Conducted weekly tutorial sessions to clarify theoretical concepts and guide students through MATLAB-based simulations</li>
+                            <li>Provided support in evaluating mid-term and final projects, ensuring academic integrity and alignment with course outcomes</li>
+                            <li>Mentored a master's student on a project related to full-duplex wireless systems, resulting in a co-authored publication in an IEEE conference- ANTS'2023</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-language"></i>
+                                <strong>English Language Teaching Assistant</strong>
+                            </div>
+                            <span class="dates">May 2022–May 2023</span>
+                        </div>
+                        <span class="institution">Sanmin High School & Shengli Elementary School – Kaohsiung, Taiwan</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Served as a Teaching Assistant supporting English instruction at both elementary and high school levels</li>
+                            <li>Assisting in lesson planning and classroom activity development</li>
+                            <li>Grading assignments and evaluating student progress</li>
+                            <li>Supporting student engagement in English-based extracurriculars</li>
+                            <li>Coordinating communication between students and instructors</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <strong>Coding Instructor</strong>
+                            </div>
+                            <span class="dates">March 2020 – March 2022</span>
+                        </div>
+                        <span class="institution">Byju’s Future School & WhiteHat Jr – Online</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Delivered over 1500 personalized coding sessions focused on foundational and advanced concepts in application and web development</li>
+                            <li>Taught programming languages including Python, JavaScript, HTML/CSS, and basic SQL through project-based learning</li>
+                            <li>Guided students in building interactive web pages, mobile apps, and logic-based games using platforms such as Code.org and Thunkable</li>
+                            <li>Provided personalized mentorship to enhance logical thinking and algorithmic problem-solving skills in school-level learners</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-user-graduate"></i>
+                                <strong>Part time ECET (Diploma entrance exam) coaching tutor</strong>
+                            </div>
+                            <span class="dates">July 2017 – June 2019</span>
+                        </div>
+                        <span class="institution">ECET Coaching centers at Karimnagar</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Delivered Diploma-level instruction in core Electronics, Electrical, and Computer science Engineering courses</li>
+                            <li>Taught foundational and advanced courses including Physics, Digital Electronics, Basic Electronics, Analog Circuits, Analog and digital communications, Basic Electrical Engineering, Electrical & Electronic Measuring Instruments, Electric Circuits, Programming in C, Communication Systems, Network Analysis, Linear Integrated Circuits, Microprocessors, and Microcontrollers</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-user-graduate"></i>
+                                <strong>Lecturer in BSc Electronics</strong>
+                            </div>
+                            <span class="dates">July 2017 – June 2019</span>
+                        </div>
+                        <span class="institution">Apoorva Degree College – Karimnagar, India</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Delivered undergraduate-level instruction in core Electronics subjects and organized student development activities</li>
+                            <li>Taught foundational and advanced courses including Digital Electronics, Basic Electronics, Analog Circuits, and Microprocessors</li>
+                            <li>Designed and supervised practical lab sessions involving circuit design, simulation, and microcontroller programming</li>
+                            <li>Conducted workshops on electronics prototyping and embedded systems, improving hands-on skills among students</li>
+                            <li>Mentored final-year students for academic projects and guided them through report writing and technical presentations</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-flask"></i>
+                                <strong>Intern during Masters</strong>
+                            </div>
+                            <span class="dates">June 2021 - July 2021</span>
+                        </div>
+                        <span class="institution">Indian Institute of Technology - Jammu, India</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Internship under the VRITIKA event titled "Simultaneous Light Information and Power Transfer (SLIPT) for IRS-Assisted Hybrid FSO-VLC/RF Network"</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-robot"></i>
+                                <strong>Intern during Bachelors</strong>
+                            </div>
+                            <span class="dates">December 2015 - January 2016</span>
+                        </div>
+                        <span class="institution">Pro-imagination - Hyderabad, India</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Participated in making of Various types of Robots, circuit designing and Various types of Transmitters and Receivers</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="work-header">
+                        <div class="title-line">
+                            <div>
+                                <i class="fa-solid fa-industry"></i>
+                                <strong>Industrial Training during Diploma</strong>
+                            </div>
+                            <span class="dates">December 2012 - June 2013</span>
+                        </div>
+                        <span class="institution">Pro-imagination - Hyderabad, India</span><br>
+                        <div class="responsibilities-heading">Responsibilities</div>
+                        <ul>
+                            <li>Participated in making of Electronic Rifle depositing system project for DRDL Bangalore, Traffic Control system for HYD and Wireless communication System for HAM radio</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const icon = themeToggle.querySelector('i');
+
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                body.classList.add('dark');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark');
+                const isDark = body.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+                if (isDark) {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                } else {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
