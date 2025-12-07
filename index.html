@@ -12,12 +12,12 @@
     <title>Sravani Kurma Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- Font Awesome -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GK3PD5WKYW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXX');
+  gtag('config', 'G-GK3PD5WKYW');
 </script>
 
 <script type="application/ld+json">
@@ -689,6 +689,16 @@
     font-style: italic;
     text-decoration: underline;
 }
+.visitor-count-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
     </style>
     <style>
         .stats-container {
@@ -740,6 +750,16 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+        }
+        .google-analytics-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--section-border);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 14px;
         }
         .locations-list {
             list-style-type: none;
@@ -796,7 +816,6 @@
     <a href="#publications"><i class="fa-solid fa-book"></i> Publications</a>
     <a href="#projects"><i class="fa-solid fa-book"></i> Projects</a>
     <a href="#contact"><i class="fa-solid fa-user"></i> Contact</a>
-    <a href="#stats"><i class="fa-solid fa-chart-line"></i> Stats</a>
 </div>
 
 
@@ -827,6 +846,9 @@
                 <li>Open Radio access networks</li>
                 <li>Mobile Edge Computing Networks</li>
             </ul>
+        </div>
+        <div class="visitor-count-box">
+            <p id="visitor-count-line">This site has been viewed by <span id="visitor-count">0</span> visitors (powered by Google Analytics).</p>
         </div>
     </div>
 </div>
@@ -1339,32 +1361,7 @@
     </div>
 </div>
 
-<!-- Stats Section -->
-<div class="section" id="stats">
-    <div class="section-title"><i class="fa-solid fa-chart-line"></i> Website Stats</div>
-    <div class="section-content">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>Total Visitors</h3>
-                <p id="total-visitors"><img src="https://hitwebcounter.com/counter/counter.php?page=123456&style=0001&nbdigits=5&type=ip&initCount=0" alt="web counter" border="0"></p>
-            </div>
-            <div class="stat-item">
-                <h3>Views Today</h3>
-                <p id="views-today">Loading...</p>
-            </div>
-            <div class="graph-container">
-                <h3>Views Over Time</h3>
-                <canvas id="views-chart"></canvas>
-            </div>
-            <div class="locations-container">
-                <h3>Visitor Locations</h3>
-                <ul class="locations-list" id="visitor-locations">
-                    <!-- Locations will be populated by JavaScript -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- Referees Section -->
 <div class="section" id="referees">
@@ -1479,8 +1476,13 @@
             });
         });
 
-        // Stats
-        document.getElementById('total-visitors').textContent = '1234'; // Placeholder - replace with real data integration
+        // Stats - Real-time visitor counter using localStorage
+        let visitorCount = localStorage.getItem('visitorCount') || 0;
+        visitorCount = parseInt(visitorCount) + 1;
+        localStorage.setItem('visitorCount', visitorCount);
+        document.getElementById('total-visitors').textContent = visitorCount;
+
+        // Views today - placeholder, as real-time data requires backend
         document.getElementById('views-today').textContent = '56'; // Placeholder - replace with real data integration
 
         // Visitor Locations
@@ -1503,14 +1505,15 @@
         // Chart
         const ctx = document.getElementById('views-chart').getContext('2d');
         const chart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
                 datasets: [{
                     label: 'Views',
                     data: [12, 19, 3, 5, 2, 3, 9],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
                     borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 1
                 }]
             },
             options: {
