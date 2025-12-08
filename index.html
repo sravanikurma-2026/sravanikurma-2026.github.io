@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+r<!DOCTYPE html>
 <html lang="en">
 
 <!-- ========================This is the head ========================-->
@@ -685,42 +685,80 @@
     margin-bottom: 20px;
 }
 
-.home-box h3 {
-    text-decoration: underline;
-}
-
 .home h3 {
     font-style: italic;
     text-decoration: underline;
 }
 
-#mapmyvisitors {
-    width: 100%;
-    height: 500px;
+#home h3 {
+    text-decoration: underline;
+}
+
+#home .home-box h3 {
+    margin-bottom: 10px;
+}
+
+#home .home-box script {
+    display: block;
+    max-width: 100%;
+    height: 400px;
     border: none;
+    margin-top: 0;
 }
 
 .news-list {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
 }
 
 .news-list li {
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: var(--text-color);
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
+    margin-bottom: 10px;
 }
 
 .news-list li::before {
-    content: "→";
-    color: var(--section-title);
-    font-size: 20px;
+    content: "\f1ea"; /* fa-newspaper icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 0;
+    color: var(--text-color);
+    font-size: 16px;
+}
+.visitor-count-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+.analytics-visualization {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.analytics-visualization h3 {
+    margin-bottom: 10px;
+    color: var(--section-title);
+}
+.analytics-visualization p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+#analytics-chart {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
 }
     </style>
     <style>
@@ -835,6 +873,8 @@
     <a href="#home"><i class="fa-solid fa-home"></i> Home</a>
     <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
     <a href="#work-experience"><i class="fa-solid fa-briefcase"></i> Work Experience</a>
+    <a href="#achievements"><i class="fa-solid fa-trophy"></i> Achievements</a>
+    <a href="#honors-awards"><i class="fa-solid fa-award"></i> Honors and Awards</a>
     <a href="#skills"><i class="fa-solid fa-users"></i>Service</a>
     <a href="#publications"><i class="fa-solid fa-book"></i> Publications</a>
     <a href="#projects"><i class="fa-solid fa-book"></i> Projects</a>
@@ -871,7 +911,7 @@
             </ul>
         </div>
         <div class="home-box">
-            <h3>Recent News</h3>
+            <h3><i class="fa-solid fa-rss"></i> Recent News</h3>
             <ul class="news-list">
                 <li>Published 23 research works including 12 conferences and 11 transactions by the end of 2025</li>
                 <li>Submitted proposal to NSF-VINES Track-1 (International collaboration with India)</li>
@@ -880,10 +920,7 @@
                 <li>Received Excellent Ph.D Student in Research Award in 2024</li>
                 <li>Completed Ph.D. from National Sun Yat-sen University, Taiwan in 2024</li>
             </ul>
-        </div>
-        <div class="home-box">
-            <h3>Visitor Map</h3>
-            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=2cz4oVbSOrtdAa_TP5YLNx1lKs7V1MVji0hx77wIq6o&cl=ffffff&w=a"></script>
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=2cz4oVbSOrtdAa_TP5YLNx1lKs7V1MVji0hx77wIq6o&cl=ffffff&w=a"></script>
         </div>
     </div>
 </div>
@@ -1086,143 +1123,339 @@
                     <span class="institution">Apoorva Degree College – Karimnagar, India</span><br>
                     <div class="responsibilities-heading">Responsibilities</div>
                     <ul>
-                        <li>Taught BSc Electronics courses including Digital Electronics, Analog Circuits, Communication Systems, and Microprocessors</li>
-                        <li>Prepared course materials, conducted labs, and evaluated student performance</li>
+                        <li>Delivered undergraduate-level instruction in core Electronics subjects and organized student development activities</li>
+                        <li>Taught foundational and advanced courses including Digital Electronics, Basic Electronics, Analog Circuits, and Microprocessors</li>
+                        <li>Designed and supervised practical lab sessions involving circuit design, simulation, and microcontroller programming</li>
+                        <li>Conducted workshops on electronics prototyping and embedded systems, improving hands-on skills among students</li>
+                        <li>Mentored final-year students for academic projects and guided them through report writing and technical presentations</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="work-header">
+                    <div class="title-line">
+                        <div>
+                            <i class="fa-solid fa-flask"></i>
+                            <strong>Intern during Masters</strong>
+                        </div>
+                        <span class="dates">June 2021 - July 2021</span>
+                    </div>
+                    <span class="institution">Indian Institute of Technology - Jammu, India</span><br>
+                    <div class="responsibilities-heading">Responsibilities</div>
+                    <ul>
+                        <li>Internship under the VRITIKA event titled "Simultaneous Light Information and Power Transfer (SLIPT) for IRS-Assisted Hybrid FSO-VLC/RF Network"</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="work-header">
+                    <div class="title-line">
+                        <div>
+                            <i class="fa-solid fa-robot"></i>
+                            <strong>Intern during Bachelors</strong>
+                        </div>
+                        <span class="dates">December 2015 - January 2016</span>
+                    </div>
+                    <span class="institution">Pro-imagination - Hyderabad, India</span><br>
+                    <div class="responsibilities-heading">Responsibilities</div>
+                    <ul>
+                        <li>Participated in making of Various types of Robots, circuit designing and Various types of Transmitters and Receivers</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="work-header">
+                    <div class="title-line">
+                        <div>
+                            <i class="fa-solid fa-industry"></i>
+                            <strong>Industrial Training during Diploma</strong>
+                        </div>
+                        <span class="dates">December 2012 - June 2013</span>
+                    </div>
+                    <span class="institution">Pro-imagination - Hyderabad, India</span><br>
+                    <div class="responsibilities-heading">Responsibilities</div>
+                    <ul>
+                        <li>Participated in making of Electronic Rifle depositing system project for DRDL Bangalore, Traffic Control system for HYD and Wireless communication System for HAM radio</li>
                     </ul>
                 </div>
             </li>
         </ul>
+        </div>
     </div>
 </div>
 
 
-<!-- Skills Section -->
-<div class="section" id="skills">
-    <div class="section-title"><i class="fa-solid fa-users"></i> Service</div>
+<!-- Achievements Section -->
+<div class="section" id="achievements">
+    <div class="section-title"><i class="fa-solid fa-trophy"></i> Achievements</div>
     <div class="section-content">
-        <div class="skills">
-            <ol>
+        <div class="achievements">
+            <ul>
                 <li>
-                    <strong>Technical Program Committee (TPC) Member</strong>
-                    <ul>
-                        <li>IEEE International Conference on Communications (ICC) 2025</li>
-                        <li>IEEE Global Communications Conference (GLOBECOM) 2024</li>
-                        <li>IEEE Wireless Communications and Networking Conference (WCNC) 2024</li>
-                        <li>IEEE International Conference on Computer Communications and Networks (ICCCN) 2024</li>
-                        <li>IEEE International Conference on Advanced Networks and Telecommunications Systems (ANTS) 2023</li>
-                        <li>IEEE International Conference on Signal Processing and Communications (SPCOM) 2023</li>
-                    </ul>
+                    <i class="fa-solid fa-medal"></i> <strong>2023:</strong> All-topic competition at NSYSU, Taiwan - <span class="highlight">III prize</span>
                 </li>
                 <li>
-                    <strong>Reviewer</strong>
-                    <ul>
-                        <li>IEEE Transactions on Wireless Communications</li>
-                        <li>IEEE Transactions on Communications</li>
-                        <li>IEEE Transactions on Vehicular Technology</li>
-                        <li>IEEE Transactions on Cognitive Communications and Networking</li>
-                        <li>IEEE Internet of Things Journal</li>
-                        <li>IEEE Communications Letters</li>
-                        <li>IEEE Wireless Communications Letters</li>
-                        <li>IEEE Access</li>
-                        <li>Elsevier Computer Networks</li>
-                        <li>Elsevier Physical Communication</li>
-                    </ul>
+                    <i class="fa-solid fa-award"></i> <strong>2021:</strong> Gold Medalist in Masters in Communication Engineering
                 </li>
                 <li>
-                    <strong>Session Chair</strong>
-                    <ul>
-                        <li>IEEE ANTS 2023</li>
-                        <li>IEEE ICC 2024</li>
-                    </ul>
+                    <i class="fa-solid fa-star"></i> <strong>2020:</strong> Seven Medals in Sports and Cultural events at Vihang, VNIT Nagpur
                 </li>
                 <li>
-                    <strong>Volunteer</strong>
-                    <ul>
-                        <li>IEEE ComSoc Student Branch at NSYSU</li>
-                        <li>IEEE Women in Engineering (WIE) at NSYSU</li>
-                    </ul>
+                    <i class="fa-solid fa-book"></i> <strong>2019:</strong> GATE in Electronics and Communication Engineering - <span class="highlight">Score: 476</span>
                 </li>
+                <li>
+                    <i class="fa-solid fa-language"></i> <strong>IELTS:</strong> CEFR level - B2, <span class="highlight">Score: 6.5</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Honors and Awards Section -->
+<div class="section" id="honors-awards">
+    <div class="section-title"><i class="fa-solid fa-award"></i> Honors and Awards</div>
+    <div class="section-content">
+        <div class="honors-awards">
+            <h3>Honors</h3>
+            <ol reversed>
+                <li>Selected among the <a href="https://medium.com/@womenin6g/announcing-the-100-brilliant-and-inspiring-women-in-6g-list-for-2024-4b6b486c5a69" style="color: violet;">“100 Brilliant and Inspiring Women in 6G – 2024”</a> by Women in 6G™, featured as a <em>Rising Star</em> for impactful research contributions to 6G wireless communication systems.</li>
+                <li>Excellent Ph.D. research award, Institute of Communication Engineering, NSYSU, Taiwan - 2024</li>
+                <li>Elite Scholarship (PhD) <em>[2021–2024]</em>, National Sun Yat-sen University, Taiwan</li>
+                <li>Gold Medalist in Masters in Communication Engineering, VNIT, Nagpur, India - 2021</li>
+            </ol>
+            <hr>
+            <h3>Travel Grants</h3>
+            <ol reversed>
+                <li>2024 IEEE ComSoc Women in Communications Engineering (WICE) Travel Grant for IEEE International Conference on Communications (ICC), Denver, USA.</li>
+                <li>2023 National Science and Technology Council Grant to attend IEEE Wireless Communications and Networking Conference (WCNC), Glasgow, United Kingdom.</li>
+            </ol>
+            <h3>Invited Talks</h3>
+            <ol reversed>
+                <li>Delivered an expert Lecture at All India Seminar on Quantum Machine Learning for Next Generation Wireless Networks, MNNIT Allahabad, September, 2025.</li>
+                <li>Delivered a keynote at MeitY-supported workshop on Reconfigurable Intelligent Surfaces for 6G, VNIT Nagpur, March 2025.</li>
             </ol>
         </div>
     </div>
 </div>
 
 
-<!-- Publications Section -->
+<!-- Service and Professional Activities Section -->
+<div class="section" id="skills">
+    <div class="section-title"><i class="fa-solid fa-users"></i>Service and Professional Activities</div>
+    <div class="section-content">
+        <div class="skills">
+            <ol>
+                <li><strong>Reviewer, IEEE Transactions and Journals (2023–Present):</strong>
+                    <ul>
+                        <li>IEEE Transactions on Communications</li>
+                        <li>IEEE Transactions on Wireless Communications</li>
+                        <li>IEEE Transactions on Intelligent Transportation Systems</li>
+                        <li>IEEE Internet of Things Journal</li>
+                        <li>IEEE Communications Letters</li>
+                        <li>IEEE Wireless Communications Letters</li>
+                        <li>IEEE Access</li>
+                    </ul>
+                </li>
+                <li><strong>Judge, Spring Undergraduate Research Symposium – Engineering Judging Session,</strong> Mississippi State University, Spring 2025.</li>
+                <li><strong>Technical Program Committee (TPC) Member</strong>-2026 EuCNC & 6G Summit- SAQ.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+<!-- Publication Section -->
 <div class="section" id="publications">
-    <div class="section-title"><i class="fa-solid fa-book"></i> Publications</div>
+    <div class="section-title"><i class="fa-solid fa-book"></i>Publications</div>
     <div class="section-content">
         <div class="publications">
+        <div class="publication-box">
+            <div class="section-title"><i class="fa-solid fa-book"></i>Transactions</div>
+            <ul>
+<li>
+<p>[20] OJ Pandey, MK Shukla, <strong>S. Kurma</strong>, CH. Liu, and V. Marojevic, <strong>Towards Intelligent Semantic Communications: A Survey on AI Methods for Efficient Information Transmission</strong>, <i><strong>IEEE Communications Surveys & Tutorials</strong></i>, Oct, 2025. (Under review) (SCI - IF 7.1)</p>
+</li>
+<li>
+<p>[19] <strong>S. Kurma</strong>, M. Zhang, U. Upadhyay, S. Dhamala, and V. Marojevic, <strong>A Novel Jamming Detection and Classification in O-RAN</strong>, <i><strong>IEEE Transactions on Vehicular Technology</strong></i>, Oct, 2025. (Under review) (SCI - IF 7.1)</p>
+</li>
+<li>
+<p>[18] S. Shilpa, SK. Singh, <strong>S. Kurma</strong>, and S.Prathyusha, <strong>Optimizing RSMA-assisted Integrated Terrestrial and Non-Terrestrial Networks Performance</strong>, <i><strong>IEEE Journal on Selected Areas in Communications</strong></i>, Oct, 2025. (Under review) (SCI - IF 17.2)</p>
+</li>
+<li>
+<p>[17] S. Gaurav, <strong>S. Kurma</strong>, C. Vini, and R. Debasri, <strong>Secrecy rate optimization in Sparse Hybrid RIS-aided Internet of Robotics Networks</strong>, <i><strong>IEEE Transactions on Communications</strong></i>, Oct, 2025. (Under review) (SCI - IF 8.3)</p>
+</li>
+<li>
+<p>[16] <strong>S. Kurma</strong>, S.Dhamala, U.Upadhyay, S. Judin, V. Marojevic, and S. Mumtaz, <strong>Spectral-energy efficiency trade-off optimization in Hybrid RIS-Aided IAB Networks with Sparsification</strong>, <i><strong>IEEE Transactions on Communications</strong></i>, Sep, 2025. (Under review) (SCI - IF 8.3)</p>
+</li>
+<li>
+<p>[15] <strong>S. Kurma</strong>, C.Liu, S.Dhamala, U.Upadhyay, V. Marojevic, and S. Mumtaz, <strong>Secure and Privacy-Preserving ISAC in RIS-Aided IAB Networks with Delay Alignment Modulation</strong>, <i><strong>IEEE Transactions on Network Science and Engineering</strong></i>, Sep, 2025. (Under review) (SCI - IF 7.9)</p>
+</li>
+<li>
+<p>[14] <strong>S. Kurma</strong>, C.Liu, S.Dhamala, U.Upadhyay, V. Marojevic, R. Allu, and S. Mumtaz, <strong>Secrecy rate optimization using Hybrid actor DRL for DAM integrated RIS-Aided IAB Networks</strong>, <i><strong>IEEE Transactions on Wireless Communications</strong></i>, Sep, 2025. (Under review) (SCI - IF 10.4)</p>
+</li>
+<li>
+<p>[13] <strong>S. Kurma</strong>, U. Upadhyay, and V. Marojevic, <strong>Ensemble Machine Learning-Enabled xApps for Multi-Class Jamming Detection in O-RAN</strong>, <i><strong>IEEE Transactions on Vehicular Technology</strong></i>, Sep, 2025. (Under review) (SCI - IF 7.1)</p>
+</li>
+<li>
+<p>[12] <strong>S. Kurma</strong>, S. Dhamala, and V. Marojevic, <strong>Slice-Aware Digital Twin Virtualization with RAG Assistant for O-RAN in Internet-of-Vehicles</strong>, <i><strong>IEEE Transactions on Vehicular Technology</strong></i>, Sep, 2025. (Under review, Major revision done) (SCI - IF 7.1)</p>
+</li>
+<li>
+<p>[11] <strong>S. Kurma</strong>, K. Singh, A.-A.A. Boulogeorgos, C.-P. Li and T. A. Tsiftsis, <a href="https://ieeexplore.ieee.org/document/11153881"><strong>Active RIS-Aided Full-Duplex Cell-free Massive MIMO for Mobile Wireless Networks of Limited Capacity</strong></a>, <i><strong>IEEE Transactions on Vehicular Technology</strong></i>, Sep, 2025. (SCI - IF 7.1)</p>
+</li>
+<li>
+<p>[10] <strong>S. Kurma</strong>, K. Singh, A. Paul, S. Mumtaz, and C.-P. Li, <a href="https://ieeexplore.ieee.org/document/11075701"><strong>Dual-LLM Integration for Next-Gen Wireless Networks: Synergizing with DUDR and RIS,</strong></a> <i><strong>IEEE Transactions on Communications</strong></i>, July, 2025. (SCI - IF 8.3)</p>
+</li>
+<li>
+<p>[9] <strong>S. Kurma</strong>, K. Singh, P. K. Sharma, C.-P. Li and T. A. Tsiftsis, <a href="https://ieeexplore.ieee.org/document/10741221"><strong>On the Performance Analysis of Full-Duplex Cell-Free Massive MIMO with User Mobility and Imperfect CSI</strong></a>, <i><strong>IEEE Transactions on Communications</strong></i>, Nov. 2024. (SCI - IF 8.3)</p>
+</li>
+<li>
+<p>[8] T. A. Lestari, <strong>S. Kurma</strong>, K. Singh, A. Paul, S. Cotton and T. Q. Duong, <a href="https://ieeexplore.ieee.org/abstract/document/10703125"><strong>Exploiting Active STAR-RIS to enable URLLC in Digitally-Twinned Internet-of-Things Networks</strong></a>, <i><strong>IEEE Transactions on Communications</strong></i>, Oct. 2024. (SCI - IF 8.3)</p>
+</li>
+<li>
+<p>[7] <strong>S. Kurma</strong>, K. Singh, S. Mumtaz, T. A. Tsiftsis and C.-P. Li, <a href="https://ieeexplore.ieee.org/document/10606184"><strong>Resource Optimization in Active-STAR-RIS-Aided THz ISAC Systems with DDA Modulation: A Machine-Learning Approach</strong></a>, <i><strong>IEEE Transactions on Wireless Communications</strong></i>, July 2024. (SCI - IF 10.4)</p>
+</li>
+<li>
+<p>[6] <strong>S. Kurma</strong>, K. Singh, A.-A.A. Boulogeorgos, C.-P. Li and T. A. Tsiftsis, <a href="https://ieeexplore.ieee.org/abstract/document/10525063"><strong>URLLC-Enabled Full-duplex Cell-Free Massive MIMO Systems for Intelligent Vehicles with Mobility and CSI Imperfections</strong></a>, <i><strong>IEEE Open Journal of the Communications Society</strong></i>, May 2024. (SCI - IF 7.9)</p>
+</li>
+<li>
+<p>[5] <strong>S. Kurma</strong>, P. K. Sharma, K. Singh, S. Mumtaz and C.-P. Li, <a href="https://ieeexplore.ieee.org/abstract/document/9756304"><strong>URLLC-Based Cooperative Industrial IoT Networks With Nonlinear Energy Harvesting</strong></a>, <i><strong>IEEE Transactions on Industrial Informatics</strong></i>, May 2024. (SCI - IF 12.3)</p>
+</li>
+<li>
+<p>[4] <strong>S. Kurma</strong>, T. A. Lestari, K. Singh, A. Paul, and S. Mumtaz, <a href="https://ieeexplore.ieee.org/document/10509625"><strong>Active RIS in Digital Twin-based URLLC IoT Networks: Fully-Connected vs. Sub-Connected?</strong></a>, <i><strong>IEEE Transactions on Wireless Communications</strong></i>, Apr. 2024. (SCI - IF 10.4)</p>
+</li>
+<li>
+<p>[3] <strong>S. Kurma</strong>, M. Katwe, K. Singh, C. Pan, S. Mumtaz and C.-P. Li, <a href="https://ieeexplore.ieee.org/abstract/document/10319784"><strong>RIS-Empowered MEC for URLLC Systems with Digital-Twin-Driven Architecture</strong></a>, <i><strong>IEEE Transactions on Communications</strong></i>, Apr. 2024. (SCI - IF 8.3)</p>
+</lii >
+<li>
+<p>[2] <strong>S. Kurma</strong>, M. Katwe, K. Singh, T. Q. Duong and C.-P. Li, <a href="https://ieeexplore.ieee.org/abstract/document/10289120"><strong>Spectral-Energy Efficient Resource Allocation in RIS-Aided FD-MIMO Systems</strong></a>, <i><strong>IEEE Transactions on Wireless Communications</strong></i>, Oct. 2023. (SCI - IF 10.4)</p>
+</li>
+<li>
+<p>[1] <strong>S. Kurma</strong>, P. K. Sharma, S. Dhok, K. Singh and C.-P. Li, <a href="https://ieeexplore.ieee.org/abstract/document/9802824"><strong>Adaptive AF/DF Two-Way Relaying in FD Multiuser URLLC System With User Mobility</strong></a>, <i><strong>IEEE Transactions on Wireless Communications</strong></i>, Dec. 2022. (SCI - IF 10.4)</p>
+</li>
+            </ul>
+        </div>
             <div class="publication-box">
-                <h3>Journal Publications</h3>
+                <div class="section-title"><i class="fa-solid fa-book"></i>Conferences</div>
                 <ul>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Deep Reinforcement Learning for Resource Allocation in Cell-Free Massive MIMO Networks," <em>IEEE Transactions on Wireless Communications</em>, 2024. (Under Review)</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Machine Learning for RIS-Assisted Cell-Free Massive MIMO," <em>IEEE Transactions on Communications</em>, 2024. (Under Review)</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Energy-Efficient Resource Allocation in RIS-Assisted Networks," <em>IEEE Transactions on Vehicular Technology</em>, 2024. (Under Review)</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Full-Duplex Communication in Cell-Free MIMO," <em>IEEE Transactions on Cognitive Communications and Networking</em>, 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Cooperative Communication with RIS," <em>IEEE Wireless Communications Letters</em>, 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "URLLC in 6G Networks," <em>IEEE Access</em>, 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Machine Learning for IoT," <em>Elsevier Physical Communication</em>, 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Resource Allocation in Cell-Free MIMO," <em>IEEE Communications Letters</em>, 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "RIS for 5G," <em>IEEE Internet of Things Journal</em>, 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Energy Harvesting in Wireless Networks," <em>Elsevier Computer Networks</em>, 2021.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Full-Duplex in MIMO," <em>IEEE Transactions on Communications</em>, 2021.</li>
+                <li>
+                    <strong>17. </strong>S. Gaurav, <strong>S. Kurma</strong>, C. Vini, and R. Debasri, "Energy efficiency Secrecy rate optimization in Sparse Hybrid RIS-Aided internet of robotics Networks," <em><strong>IEEE International Conference on Communications</strong></em>, Glasgow, Scotland, UK, 2026 (Under review). (Tier 1)
+                </li>
+                <li>
+                    <strong>16. </strong><strong>S. Kurma</strong>, S. Dhamala, U. Upadhyay, S. Judin, V. Marojevic, and S. Mumtaz, "Energy efficiency optimization in Sparse Hybrid RIS-Aided IAB Networks," <em><strong>IEEE International Conference on Communications</strong></em>, Glasgow, Scotland, UK, 2026 (Under review). (Tier 1)
+                </li>
+                <li>
+                    <strong>15. </strong><strong>S. Kurma</strong>, C. Liu, S. Dhamala, U. Upadhyay, V. Marojevic, and S. Mumtaz, "Secure and Privacy-Preserving ISAC in RIS-Aided IAB," <em><strong>IEEE International Conference on Communications</strong></em>, Glasgow, Scotland, UK, 2026 (Under review). (Tier 1)
+                </li>
+                <li>
+                    <strong>14. </strong><strong>S. Kurma</strong>, C. Liu, S. Dhamala, U. Upadhyay, V. Marojevic, and S. Mumtaz, "Hybrid DRL for Secrecy Optimization in RIS-Aided IAB Networks with DAM," <em><strong>IEEE International Conference on Communications</strong></em>, Glasgow, Scotland, UK, 2026 (Under review). (Tier 1)
+                </li>
+                <li>
+                    <strong>13. </strong><strong>S. Kurma</strong>, S. Dhamala, and M. Vuk, "AI-Driven Slice-Aware Digital Twin Virtualization in O-RAN for IoV with eMBB and URLLC Traffic," <em><strong>IEEE International Conference on Communications</strong></em>, Glasgow, Scotland, UK, 2026 (Under review). (Tier 1)
+                </li>
+                <li>
+                    <strong>12. </strong><strong>S. Kurma</strong>, Tri Ayu Lestari, K. Singh, A. Paul, and S. Biswas, "Digital Twin and Active STAR-RIS Integration for Improved URLLC in Cognitive Radio Networks," <em><strong>IEEE International Conference on Communications</strong></em>, Montreal, Canada, 2025 (Accepted). (Tier 1)
+                </li>
+                <li>
+                    <strong>11. </strong><strong>S. Kurma</strong>, K. Singh, A. Paul, S. Mumtaz, and C.-P. Li, "LLMs for Resource Allocation in Next-Gen RIS-Aided Healthcare Wireless Networks," <em><strong>IEEE INFOCOM METAVERSE</strong></em>, London, UK, 2025 (Accepted). (Tier 1)
+                </li>
+                <li>
+                    <strong>10. </strong>T. A. Lestari, <strong>S. Kurma</strong>, K. Singh, A. Paul, and S. Mumtaz, "<a href="https://ieeexplore.ieee.org/abstract/document/10623114">Active STAR-RIS Assisted Digital Twin-based URLLC Internet-of-Things Networks</a>," <em><strong>IEEE International Conference on Communications</strong></em>, Denver, CO, USA, 2024. (Tier 1)
+                </li>
+                <li>
+                    <strong>9. </strong><strong>S. Kurma</strong>, K. Singh, S. Mumtaz, T. A. Tsiftsis and C.-P. Li, "<a href="https://ieeexplore.ieee.org/document/10622984">ML-Driven Resource Optimization in Active-Star-RIS-Aided THz ISAC Systems with DDA Modulation</a>," <em><strong>IEEE International Conference on Communications</strong></em>, Denver, CO, USA, 2024. (Tier 1)
+                </li>
+                <li>
+                    <strong>8. </strong><strong>S. Kurma</strong>, K. Singh, V. Bhatia, C.-P. Li and T. A. Tsiftsis, "<a href="https://ieeexplore.ieee.org/abstract/document/10622188">Active RIS-assisted CFm-MIMO with User Mobility and Constrained Fronthaul Capacity</a>," <em><strong>IEEE International Conference on Communications</strong></em>, Denver, CO, USA, 2024. (Tier 1)
+                </li>
+                <li>
+                    <strong>7. </strong>R. Yadav, <strong>S. Kurma</strong>, S. K. Singh, C.-P. Li, and M. R. Parate, "<a href="https://ieeexplore.ieee.org/abstract/document/10468679">DRL-Based Transmission Design for Distributed STAR-RIS-aided Communications</a>", <em><strong>IEEE ANTS'23-Workshop 7 - Selected Topics in 6G Wireless Communications</strong></em>, Jaipur, India, 2023. (CCR - B)
+                </li>
+                <li>
+                    <strong>6. </strong>T. A. Lestari, <strong>S. Kurma</strong>, K. Singh, A. Paul, and S. Mumtaz, "<a href="https://ieeexplore.ieee.org/document/10437474">Active-RIS-Assisted Digital Twin-based URLLC Internet-of-Things Networks</a>", <em><strong>IEEE Global Communications Conference</strong></em>, Kuala Lumpur, Malaysia, 2023. (Tier 1)
+                </li>
+                <li>
+                    <strong>5. </strong><strong>S. Kurma</strong>, K. Singh, P. K. Sharma, C.-P. Li and T. A. Tsiftsis, "<a href="https://ieeexplore.ieee.org/abstract/document/10279490">Uplink Cell-Free Massive MIMO URLLC Systems with User Mobility and Imperfect CSI</a>", <em><strong>IEEE International Conference on Communications</strong></em>, Rome, Italy, 2023. (Tier 1)
+                </li>
+                <li>
+                    <strong>4. </strong><strong>S. Kurma</strong>, K. Singh, M. Katwe, S. Mumtaz and C.-P. Li, "<a href="https://ieeexplore.ieee.org/abstract/document/10226132">RIS-Empowered MEC for URLLC Systems with Digital-Twin-Driven Architecture</a>", <em><strong>IEEE INFOCOM WKSHPS</strong></em>, Hoboken, NJ, USA, 2023. (Tier 1)
+                </li>
+                <li>
+                    <strong>3. </strong><strong>S. Kurma</strong>, K. Singh, P. K. Sharma and C.-P. Li, "<a href="https://ieeexplore.ieee.org/abstract/document/10118961">DRL Approach for Spectral-Energy Trade-off in RIS-assisted Full-duplex Multi-user MIMO Systems</a>", <em><strong>IEEE WCNC</strong></em>, Glasgow, UK, 2023. (Tier 1)
+                </li>
+                <li>
+                    <strong>2. </strong><strong>S. Kurma</strong>, K. Singh, P. K. Sharma and C.-P. Li, "<a href="https://ieeexplore.ieee.org/abstract/document/10017452">Outage Probability Analysis of Uplink Cell-Free Massive MIMO with User Mobility</a>", <em><strong>IEEE MILCOM</strong></em>, Rockville, MD, USA, 2022. (Tier 1)
+                </li>
+                <li>
+                    <strong>1. </strong><strong>S. Kurma</strong>, P. K. Sharma, V. Panse and K. Singh, "<a href="https://ieeexplore.ieee.org/abstract/document/9625404">Cooperative User Selection with Non-Linear Energy Harvesting in IoT Environment</a>", <em><strong>IEEE 94th Vehicular Technology Conference</strong></em>, Norman, OK, USA, 2021. (Tier 1)
+                </li>
                 </ul>
             </div>
             <div class="publication-box">
-                <h3>Conference Publications</h3>
+                <div class="section-title"><i class="fa-solid fa-book"></i>Book Chapters</div>
                 <ul>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Deep Learning for RIS," IEEE ICC 2024.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Cell-Free MIMO with ML," IEEE GLOBECOM 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "RIS-Assisted Networks," IEEE WCNC 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Full-Duplex Communication," IEEE ANTS 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "IoT with RIS," IEEE ICCCN 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "6G Technologies," IEEE SPCOM 2023.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Machine Learning in Communications," IEEE VTC 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Resource Allocation," IEEE PIMRC 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Cooperative Networks," IEEE ICC 2022.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Energy-Efficient Communications," IEEE GLOBECOM 2021.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "Wireless Energy Harvesting," IEEE WCNC 2021.</li>
-                    <li><strong>S. Kurma</strong>, C. Liu, and C. Wang, "MIMO Techniques," IEEE ANTS 2021.</li>
+                    <li>
+                        <strong>1. </strong><strong>Sravani Kurma</strong>, Gowtham Behara, Naga Nidadavolu, "Designing with Conscience: Ethics for the AI Era", Nova Publications, (Accepted), Oct, 2025.
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <!-- Projects Section -->
 <div class="section" id="projects">
-    <div class="section-title"><i class="fa-solid fa-book"></i> Projects</div>
+    <div class="section-title"><i class="fa-solid fa-project-diagram"></i> Projects</div>
     <div class="section-content">
         <div class="projects">
             <div class="project-box">
-                <h3>AI-Driven O-RAN Architecture</h3>
-                <p>Developing AI-driven Open RAN systems with digital twin integration for next-generation networks.</p>
+                <h3>MSU Projects</h3>
+                <ul>
+                    <li>RIS</li>
+                    <li>OAIC</li>
+                    <li>LLMS</li>
+                    <li>QUANTUM COMPUTING</li>
+                </ul>
             </div>
             <div class="project-box">
-                <h3>Cell-Free Massive MIMO</h3>
-                <p>Research on cell-free massive MIMO networks for improved spectral efficiency and coverage.</p>
-            </div>
-            <div class="project-box">
-                <h3>RIS-Assisted Communications</h3>
-                <p>Optimization of reconfigurable intelligent surfaces for wireless communication enhancement.</p>
-            </div>
-            <div class="project-box">
-                <h3>Machine Learning for Communications</h3>
-                <p>Applying machine learning algorithms for resource allocation and network optimization.</p>
-            </div>
-            <div class="project-box">
-                <h3>Full-Duplex Systems</h3>
-                <p>Design and analysis of full-duplex communication systems with self-interference cancellation.</p>
-            </div>
-            <div class="project-box">
-                <h3>Integrated Sensing and Communications</h3>
-                <p>Exploring ISAC technologies for 6G networks.</p>
+                <h3>NSYSU Projects</h3>
+                <ul>
+                    <li>
+                        <strong>2023:</strong> Integrated sensing and communication systems enhanced and reconfigurable with intelligent surface assistance using next-generation multi-access technology<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2023:</strong> 6G mid- and high-frequency high-order MIMO mobile communication system<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2023:</strong> Development of key communication technologies for next-generation terminals and small base stations based on mid-frequency and high-band MIMO multi-antenna systems<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2022:</strong> Development and system verification of a mid-frequency and high-band MIMO multi-antenna system and a combined MIMO reconfigurable smart surface platform<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2022:</strong> Reconfigurable Smart Surface with Simultaneous Transmission and Reflection (STAR-RIS) and Multi-RIS Assisted Rate Split Multiple Access (RSMA) to achieve higher data rates and coverage in 6G<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2021:</strong> Codebook and receiver design of sparse code multiple access system assisted by artificial intelligence<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                    <li>
+                        <strong>2021:</strong> UAV wireless communication assisted by smart reflective surfaces in finite energy Internet of Things: analysis of infinite and finite block lengths<br>
+                        <span class="role">Role: Research assistant at i-WIC lab, NSYSU, Taiwan</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <!-- Contact Section -->
@@ -1230,95 +1463,211 @@
     <div class="section-title"><i class="fa-solid fa-user"></i> Contact</div>
     <div class="section-content">
         <div class="contact-info">
-            <p><span class="contact-type">Email:</span> <a href="mailto:sravanikurma@msu.edu" class="contact-link">sravanikurma@msu.edu</a></p>
-            <p><span class="contact-type">LinkedIn:</span> <a href="https://www.linkedin.com/in/sravani-kurma" target="_blank" class="contact-link">linkedin.com/in/sravani-kurma</a></p>
-            <p><span class="contact-type">Google Scholar:</span> <a href="https://scholar.google.com/citations?user=sravanikurma" target="_blank" class="contact-link">scholar.google.com/citations?user=sravanikurma</a></p>
-            <p><span class="contact-type">ResearchGate:</span> <a href="https://www.researchgate.net/profile/Sravani-Kurma" target="_blank" class="contact-link">researchgate.net/profile/Sravani-Kurma</a></p>
-            <p><span class="contact-type">ORCID:</span> <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" class="contact-link">orcid.org/0000-0000-0000-0000</a></p>
+            <p><i class="fa-solid fa-envelope icon"></i><span class="contact-type">Email:</span> <a href="mailto:sravani.kurma2026@gmail.com" class="contact-link">sravani.kurma2026@gmail.com</a> | <a href="mailto:sravani.kurma@ece.msstate.edu" class="contact-link">sravani.kurma@ece.msstate.edu</a></p>
+            <p><i class="fa-brands fa-linkedin icon"></i><span class="contact-type">LinkedIn:</span> <a href="https://linkedin.com/in/sravanikurma" target="_blank" class="contact-link">linkedin.com/in/sravanikurma</a></p>
+            <p><i class="fa-solid fa-phone icon"></i><span class="contact-type">Phone:</span> <a href="tel:+16623524306" class="contact-link">+1 662-352-4306</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Referees Section -->
+<div class="section" id="referees">
+    <div class="section-title"><i class="fa-solid fa-users"></i> Referees</div>
+    <div class="section-content">
+        <div class="referees">
+            <ul>
+                <li>
+                    <strong>Dr. Chih-Peng Li</strong><br>
+                    <a href="mailto:cpli@mail.nsysu.edu.tw">cpli@mail.nsysu.edu.tw</a><br>
+                    National Sun-Yat sen University, Taiwan
+                </li>
+                <li>
+                    <strong>Dr. Keshav Singh</strong><br>
+                    <a href="mailto:keshav.singh@mail.nsysu.edu.tw">keshav.singh@mail.nsysu.edu.tw</a><br>
+                    National Sun-Yat sen University, Taiwan
+                </li>
+                <li>
+                    <strong>Dr. Prabhat Sharma</strong><br>
+                    <a href="mailto:prabhatmadhavec1@gmail.com">prabhatmadhavec1@gmail.com</a><br>
+                    Visvesvaraya National Institute of Technology, Nagpur, India
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
 
 <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    // Optional JavaScript to animate progress bars on load
+    document.addEventListener("DOMContentLoaded", function() {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => bar.style.width = width, 100);
+        });
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark');
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
         const icon = themeToggle.querySelector('i');
-        if (body.classList.contains('dark')) {
-            icon.className = 'fa-solid fa-moon';
-        } else {
-            icon.className = 'fa-solid fa-sun';
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
         }
-    });
 
-    // Navigation functionality
-    const navLinks = document.querySelectorAll('.navbar a');
-    const sections = document.querySelectorAll('.section');
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            sections.forEach(section => {
-                if (section.id === targetId) {
-                    section.style.display = 'block';
-                    section.querySelector('.section-content').classList.add('show');
-                } else {
-                    section.style.display = 'none';
-                    section.querySelector('.section-content').classList.remove('show');
+            // Toggle icon
+            if (isDark) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+
+        // Section navigation and toggle functionality
+        const navbarLinks = document.querySelectorAll('.navbar a');
+        const sectionTitles = document.querySelectorAll('.section-title');
+
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Hide all sections
+                    document.querySelectorAll('.section').forEach(section => {
+                        section.classList.remove('active');
+                        section.querySelector('.section-content').classList.remove('show');
+                    });
+                    // Show the target section and its content
+                    targetSection.classList.add('active');
+                    targetSection.querySelector('.section-content').classList.add('show');
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
-    });
 
-    // Section title toggle
-    sections.forEach(section => {
-        const title = section.querySelector('.section-title');
-        const content = section.querySelector('.section-content');
-        title.addEventListener('click', () => {
-            content.classList.toggle('show');
+        // Show Home section by default
+        const homeSection = document.getElementById('home');
+        if (homeSection) {
+            homeSection.classList.add('active');
+            homeSection.querySelector('.section-content').classList.add('show');
+        }
+
+        // Toggle section content on title click
+        sectionTitles.forEach(title => {
+            title.addEventListener('click', function() {
+                const section = this.parentElement;
+                const sectionContent = this.nextElementSibling;
+                // Hide all sections and contents
+                document.querySelectorAll('.section').forEach(s => {
+                    s.classList.remove('active');
+                    s.querySelector('.section-content').classList.remove('show');
+                });
+                // Show this section and its content
+                section.classList.add('active');
+                sectionContent.classList.add('show');
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
         });
-    });
 
-    // Show home section by default
-    document.getElementById('home').style.display = 'block';
-    document.getElementById('home').querySelector('.section-content').classList.add('show');
+        // Stats - Real-time visitor counter using localStorage
+        let visitorCount = localStorage.getItem('visitorCount') || 0;
+        visitorCount = parseInt(visitorCount) + 1;
+        localStorage.setItem('visitorCount', visitorCount);
+        document.getElementById('total-visitors').textContent = visitorCount;
 
-    // Visitor count simulation
-    let visitorCount = localStorage.getItem('visitorCount') || 0;
-    visitorCount = parseInt(visitorCount) + 1;
-    localStorage.setItem('visitorCount', visitorCount);
-    document.getElementById('visitor-count').textContent = visitorCount;
+        // Views today - placeholder, as real-time data requires backend
+        document.getElementById('views-today').textContent = '56'; // Placeholder - replace with real data integration
 
-    // Sample analytics chart
-    const ctx = document.getElementById('analytics-chart').getContext('2d');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-            datasets: [{
-                label: 'Page Views',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                tension: 0.1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Monthly Page Views'
+        // Visitor Locations
+        const locations = [
+            { country: 'United States', count: 450 },
+            { country: 'India', count: 320 },
+            { country: 'United Kingdom', count: 180 },
+            { country: 'Germany', count: 120 },
+            { country: 'Canada', count: 90 },
+            { country: 'Australia', count: 74 }
+        ]; // Placeholder - replace with real data integration
+
+        const locationsList = document.getElementById('visitor-locations');
+        locations.forEach(location => {
+            const li = document.createElement('li');
+            li.textContent = `${location.country}: ${location.count} visitors`;
+            locationsList.appendChild(li);
+        });
+
+        // Chart
+        const ctx = document.getElementById('views-chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+                datasets: [{
+                    label: 'Views',
+                    data: [12, 19, 3, 5, 2, 3, 9],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
+        });
+
+        // Analytics Visualization Chart
+        const analyticsCtx = document.getElementById('analytics-chart').getContext('2d');
+        const analyticsChart = new Chart(analyticsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Page Views',
+                    data: [1200, 1900, 3000, 5000, 2000, 3000],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderWidth: 2
+                }, {
+                    label: 'Unique Visitors',
+                    data: [800, 1200, 1800, 2500, 1500, 2000],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     });
 </script>
+<!-- Add more sections as needed -->
 
 </body>
+
 </html>
